@@ -1,6 +1,6 @@
 # 🚀 Personal Portfolio Website
 
-🌐 **Live Demo:** gbhadra-portfolio.vercel.app
+🌐 **Live Demo:** https://gbhadra-portfolio.vercel.app/
 
 ---
 
