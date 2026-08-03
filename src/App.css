@@ -575,3 +575,14 @@ section{
 .more-projects a:hover{
     color:#ff4d4d;
 }
+
+
+.success-message {
+  color: red;
+  font-size: 32px;
+  font-weight: bold;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
