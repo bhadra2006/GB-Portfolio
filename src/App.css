@@ -586,3 +586,990 @@ section{
   justify-content: center;
   align-items: center;
 }
+
+/* =========================================
+   PREMIUM CUTE PORTFOLIO INTRO
+   ========================================= */
+
+.premium-intro {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #160407 0%,
+      #080304 35%,
+      #030303 75%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  animation: introExit 0.8s ease forwards;
+  animation-delay: 2.45s;
+}
+
+
+/* =========================================
+   RED GLOW
+   ========================================= */
+
+.intro-red-glow {
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 20, 60, 0.28),
+    rgba(255, 20, 60, 0.08) 40%,
+    transparent 72%
+  );
+
+  filter: blur(20px);
+
+  animation: mainGlow 2.8s ease-in-out infinite;
+}
+
+.glow-two {
+  width: 500px;
+  height: 500px;
+
+  opacity: 0.25;
+
+  animation-delay: 0.5s;
+}
+
+
+/* =========================================
+   GB LOGO
+   ========================================= */
+
+.gb-logo {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  width: 90px;
+  height: 90px;
+
+  border: 1px solid rgba(255, 35, 70, 0.5);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 30, 60, 0.2),
+      rgba(255, 30, 60, 0.03)
+    );
+
+  box-shadow:
+    0 0 20px rgba(255, 20, 60, 0.25),
+    inset 0 0 20px rgba(255, 20, 60, 0.08);
+
+  color: white;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  letter-spacing: -3px;
+
+  z-index: 5;
+
+  animation:
+    logoIntro 0.8s ease forwards,
+    logoDisappear 0.5s ease forwards 1.05s;
+}
+
+
+.gb-logo span:last-child {
+  color: #ff1744;
+}
+
+
+/* =========================================
+   ORBIT RINGS
+   ========================================= */
+
+.intro-ring {
+  position: absolute;
+
+  border: 1px solid rgba(255, 23, 68, 0.18);
+
+  border-radius: 50%;
+
+  opacity: 0;
+}
+
+.ring-one {
+  width: 180px;
+  height: 180px;
+
+  animation: ringExpand 1.8s ease-out forwards;
+}
+
+.ring-two {
+  width: 280px;
+  height: 280px;
+
+  animation:
+    ringExpand 2.2s ease-out forwards;
+
+  animation-delay: 0.25s;
+}
+
+
+/* =========================================
+   NAME CONTENT
+   ========================================= */
+
+.intro-content {
+  position: relative;
+
+  z-index: 10;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  animation: contentAppear 0.9s ease forwards;
+  animation-delay: 1.15s;
+}
+
+
+.intro-content h1 {
+  margin: 0;
+
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+
+  color: #ffffff;
+}
+
+
+.intro-content h1 span {
+  color: #ff1744;
+
+  text-shadow:
+    0 0 15px rgba(255, 23, 68, 0.35);
+}
+
+
+/* =========================================
+   RED LINE
+   ========================================= */
+
+.intro-line {
+  width: 0;
+
+  height: 2px;
+
+  margin: 14px auto 12px;
+
+  background: #ff1744;
+
+  box-shadow:
+    0 0 10px rgba(255, 23, 68, 0.8);
+
+  animation: lineGrow 0.6s ease forwards;
+  animation-delay: 1.75s;
+}
+
+
+/* =========================================
+   ROLE
+   ========================================= */
+
+.intro-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 1.5px;
+
+  opacity: 0;
+
+  animation: roleAppear 0.6s ease forwards;
+  animation-delay: 1.9s;
+}
+
+
+.intro-content p b {
+  color: #ff1744;
+
+  font-weight: 400;
+
+  margin: 0 4px;
+}
+
+
+/* =========================================
+   FLOATING PARTICLES
+   ========================================= */
+
+.particles span {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #ff1744;
+
+  box-shadow:
+    0 0 8px rgba(255, 23, 68, 0.8);
+
+  opacity: 0;
+}
+
+
+/* Individual particle positions */
+
+.particles span:nth-child(1) {
+  left: 20%;
+  top: 30%;
+  animation: particleFloat 2.4s ease-in-out infinite;
+}
+
+.particles span:nth-child(2) {
+  left: 72%;
+  top: 27%;
+  animation: particleFloat 2.7s ease-in-out infinite 0.3s;
+}
+
+.particles span:nth-child(3) {
+  left: 27%;
+  top: 70%;
+  animation: particleFloat 2.5s ease-in-out infinite 0.6s;
+}
+
+.particles span:nth-child(4) {
+  left: 78%;
+  top: 65%;
+  animation: particleFloat 2.8s ease-in-out infinite 0.2s;
+}
+
+.particles span:nth-child(5) {
+  left: 15%;
+  top: 52%;
+  animation: particleFloat 2.6s ease-in-out infinite 0.8s;
+}
+
+.particles span:nth-child(6) {
+  left: 85%;
+  top: 45%;
+  animation: particleFloat 2.5s ease-in-out infinite 0.4s;
+}
+
+.particles span:nth-child(7) {
+  left: 40%;
+  top: 18%;
+  animation: particleFloat 2.7s ease-in-out infinite 0.7s;
+}
+
+.particles span:nth-child(8) {
+  left: 60%;
+  top: 82%;
+  animation: particleFloat 2.6s ease-in-out infinite 0.5s;
+}
+
+
+/* =========================================
+   SPARKLES
+   ========================================= */
+
+.intro-star {
+  position: absolute;
+
+  color: #ff1744;
+
+  font-size: 1.2rem;
+
+  opacity: 0;
+
+  text-shadow:
+    0 0 12px rgba(255, 23, 68, 0.8);
+
+  z-index: 8;
+}
+
+.star-one {
+  left: 34%;
+  top: 36%;
+
+  animation: starPop 1.4s ease forwards;
+  animation-delay: 1.25s;
+}
+
+.star-two {
+  right: 32%;
+  top: 40%;
+
+  animation: starPop 1.4s ease forwards;
+  animation-delay: 1.45s;
+}
+
+.star-three {
+  left: 38%;
+  bottom: 34%;
+
+  animation: starPop 1.4s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.star-four {
+  right: 37%;
+  bottom: 32%;
+
+  animation: starPop 1.4s ease forwards;
+  animation-delay: 1.5s;
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+   ========================================= */
+
+.intro-bottom {
+  position: absolute;
+
+  bottom: 8%;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  animation: bottomAppear 0.6s ease forwards;
+  animation-delay: 2s;
+}
+
+
+/* =========================================
+   PORTFOLIO
+   ========================================= */
+
+.portfolio-hidden {
+  opacity: 0;
+
+  transform: scale(1.02);
+}
+
+
+.portfolio-visible {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes logoIntro {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-30deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+
+@keyframes logoDisappear {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+
+@keyframes mainGlow {
+
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+}
+
+
+@keyframes ringExpand {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+
+@keyframes contentAppear {
+
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+@keyframes lineGrow {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 70px;
+  }
+}
+
+
+@keyframes roleAppear {
+
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes particleFloat {
+
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.2);
+  }
+}
+
+
+@keyframes starPop {
+
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0);
+  }
+
+  35% {
+    opacity: 1;
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.3) rotate(180deg);
+  }
+}
+
+
+@keyframes bottomAppear {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes introExit {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .gb-logo {
+    width: 72px;
+    height: 72px;
+
+    font-size: 1.2rem;
+  }
+
+  .intro-content h1 {
+    font-size: 2.1rem;
+
+    letter-spacing: -1px;
+  }
+
+  .intro-content p {
+    font-size: 0.68rem;
+
+    padding: 0 20px;
+
+    letter-spacing: 1px;
+  }
+
+  .ring-one {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ring-two {
+    width: 240px;
+    height: 240px;
+  }
+
+  .intro-bottom {
+    font-size: 0.58rem;
+  }
+}
+
+/* =========================================
+   CUTE ENDING
+   ========================================= */
+
+.cute-ending {
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 60px 20px;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.ending-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   FLOWER
+   ========================================= */
+
+.ending-flower {
+  position: relative;
+
+  width: 72px;
+  height: 72px;
+
+  margin-bottom: 25px;
+
+  transform: scale(0);
+
+  transition:
+    transform 0.8s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+
+  transition-delay: 0.2s;
+}
+
+.ending-visible .ending-flower {
+  transform: scale(1);
+}
+
+
+/* Petals */
+
+.petal {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50% 50% 45% 45%;
+
+  background: #ff1744;
+
+  box-shadow:
+    0 0 15px rgba(255, 23, 68, 0.35);
+}
+
+.petal-one {
+  top: 0;
+  left: 21px;
+}
+
+.petal-two {
+  top: 21px;
+  right: 0;
+
+  transform: rotate(90deg);
+}
+
+.petal-three {
+  bottom: 0;
+  left: 21px;
+
+  transform: rotate(180deg);
+}
+
+.petal-four {
+  top: 21px;
+  left: 0;
+
+  transform: rotate(270deg);
+}
+
+
+/* Flower center */
+
+.flower-center {
+  position: absolute;
+
+  top: 22px;
+  left: 22px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #080808;
+
+  color: #ff1744;
+
+  font-size: 0.8rem;
+
+  box-shadow:
+    0 0 12px rgba(255, 23, 68, 0.6);
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   ENDING TEXT
+   ========================================= */
+
+.cute-ending h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  font-weight: 600;
+
+  opacity: 0;
+
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+
+  transition-delay: 0.65s;
+}
+
+.ending-visible h3 {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.cute-ending p {
+  margin: 8px 0 25px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.9rem;
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+
+  transition-delay: 0.85s;
+}
+
+.ending-visible p {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   BACK TO TOP
+   ========================================= */
+
+.back-top {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 23, 68, 0.5);
+
+  border-radius: 50%;
+
+  background: rgba(255, 23, 68, 0.08);
+
+  color: #ff1744;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.back-top:hover {
+  transform: translateY(-5px);
+
+  background: #ff1744;
+
+  color: white;
+
+  box-shadow:
+    0 0 20px rgba(255, 23, 68, 0.5);
+}
+
+
+.back-top-text {
+  margin-top: 8px;
+
+  font-size: 0.65rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   ENDING SPARKLES
+   ========================================= */
+
+.ending-spark {
+  position: absolute;
+
+  color: #ff1744;
+
+  font-size: 1rem;
+
+  opacity: 0;
+}
+
+.ending-visible .ending-spark {
+  animation: endingSpark 1.5s ease forwards;
+}
+
+.spark-a {
+  left: calc(50% - 80px);
+  top: 34%;
+
+  animation-delay: 0.5s !important;
+}
+
+.spark-b {
+  left: calc(50% + 70px);
+  top: 38%;
+
+  animation-delay: 0.7s !important;
+}
+
+.spark-c {
+  left: calc(50% + 45px);
+  top: 25%;
+
+  animation-delay: 0.9s !important;
+}
+
+
+/* =========================================
+   FLOWER GENTLE MOVEMENT
+   ========================================= */
+
+.ending-visible .ending-flower {
+  animation: flowerFloat 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes flowerFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+
+@keyframes endingSpark {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      scale(0)
+      rotate(0deg);
+  }
+
+  40% {
+    opacity: 1;
+
+    transform:
+      scale(1.2)
+      rotate(90deg);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      scale(0.4)
+      translateY(-25px)
+      rotate(180deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .cute-ending {
+    min-height: 280px;
+
+    padding: 50px 20px;
+  }
+
+  .cute-ending h3 {
+    font-size: 1.25rem;
+  }
+
+  .cute-ending p {
+    font-size: 0.8rem;
+  }
+}

@@ -68,7 +68,7 @@ function Contact() {
           {sent ? (
 
             <div className="success-message">
-              Message Sent!
+              Message Sent! 
             </div>
 
 
